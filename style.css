@@ -1,41 +1,41 @@
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Lato', sans-serif;
-      line-height: 1.6;
-      background: #1a1a1a;
-      color: #ecf0f1;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  background: #1a1a1a;
+  color: #ecf0f1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #333;
-      color: #ecf0f1;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s ease;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #333;
+  color: #ecf0f1;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
 
-    header.shrink {
-      padding: 0.5rem;
-      background: #222;
-    }
+header.shrink {
+  padding: 0.5rem;
+  background: #222;
+}
 
-    /* Center Align Navbar */
+/* Center Align Navbar */
 #header .nav-links {
   display: flex;
   justify-content: flex-end; /* Align the links to the right for space for the logo */
@@ -51,129 +51,128 @@
   color: #fff;
 }
 
-/* Default hidden state for mobile navigation */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px; /* Adjust based on header height */
-  right: 10px;
-  background: #1a1a1a;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  width: 200px; /* Adjust for desired menu width */
-  padding: 10px 0;
-}
+/* Mobile Styling */
+@media (max-width: 768px) {
+  #header .nav-links {
+    flex-direction: column;
+    justify-content: flex-start; /* Align links at the start for vertical menu */
+    margin-right: 0;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    display: none;  /* Hide links by default on mobile */
+  }
 
-/* Show the navigation when the active class is added */
-.nav-links.active {
-  display: flex;
-}
-
-/* Ensure the navbar is always visible on larger screens */
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background: none;
-    box-shadow: none;
-    width: auto;
-    padding: 0;
+  #header .nav-links.active {
+    display: flex;  /* Show links when active */
   }
 }
 
+.nav-link {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: #444;
+  transition: background 0.3s ease, transform 0.2s;
+}
 
+.nav-link:hover {
+  background: #555;
+  transform: scale(1.05);
+}
 
-    .nav-link {
-      text-decoration: none;
-      color: #ecf0f1;
-      font-weight: 700;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      background: #444;
-      transition: background 0.3s ease, transform 0.2s;
-    }
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-    .nav-link:hover {
-      background: #555;
-      transform: scale(1.05);
-    }
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
 
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(45deg, #2c3e50, #34495e);
-      color: #ecf0f1;
-      margin: 2rem auto;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 1200px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+  margin: 2rem auto;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
 
-    .hero.shrink {
-      padding: 1.5rem 1rem;
-      transform: scale(0.95);
-    }
+.hero.shrink {
+  padding: 1.5rem 1rem;
+  transform: scale(0.95);
+}
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-    }
+.hero p {
+  font-size: 1.2rem;
+}
 
-    .content {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      background: #222;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      margin-bottom: 4rem; /* Adds spacing above footer */
-    }
+.content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  background: #222;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 4rem; /* Adds spacing above footer */
+}
 
-    .content section {
-      margin-bottom: 2rem;
-    }
+.content section {
+  margin-bottom: 2rem;
+}
 
-    .content h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #ecf0f1;
-    }
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ecf0f1;
+}
 
-    .content p {
-      color: #ccc;
-    }
+.content p {
+  color: #ccc;
+}
 
-    footer {
-      background: #333;
-      color: #ecf0f1;
-      text-align: center;
-      padding: 1rem;
-      margin-top: auto;
-      border-radius: 20px 20px 0 0;
-    }
+footer {
+  background: #333;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  border-radius: 20px 20px 0 0;
+}
 
-    footer p {
-      font-size: 0.9rem;
-    }
+footer p {
+  font-size: 0.9rem;
+}
 
-    footer p a {
-      color: #ecf0f1;
-      text-decoration: none;
-    }
+footer p a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
 
-    footer p a:hover {
-      text-decoration: underline;
-    }
+footer p a:hover {
+  text-decoration: underline;
+}
+
 /* 404 Page Styles */
 .error-container {
   flex-grow: 1;
@@ -214,6 +213,7 @@
   font-size: 1rem;
   color: #ddd;
 }
+
 @media (max-width: 768px) {
   .error-code {
     font-size: 5rem;
@@ -231,4 +231,3 @@
     max-height: 200px;
   }
 }
-	
