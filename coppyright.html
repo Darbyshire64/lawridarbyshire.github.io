@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copyright - Lawri Darbyshire</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header id="header">
+    <div class="logo">Lawri Darbyshire</div>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="https://github.com/Darbyshire64" target="_blank" class="nav-link">GitHub</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="interests.html" class="nav-link">Interests</a>
+      <a href="certifications.html" class="nav-link">Certifications</a>
+      <a href="coppyright.html" class="nav-link active">Copyright</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="hero">
+    <h1>Copyright Information</h1>
+    <p>All rights reserved. Please read the copyright information and terms of use for this website.</p>
+  </div>
+
+  <main class="content">
+    <section>
+      <h2>Copyright Statement</h2>
+      <p>© 2024 Lawri Darbyshire. All Rights Reserved. This website and its contents are protected by copyright laws. Any unauthorized use, reproduction, or distribution of the content on this website is prohibited without prior consent. This Is Site uses the Apache License 2.0 availbile </p>
+    </section>
+    <section>
+      <h2>Terms of Use</h2>
+      <p>By using this website, you agree to abide by the terms and conditions outlined here. Any misuse of the site or its content will result in the termination of your access.</p>
+    </section>
+    <section>
+      <h2>Privacy Policy</h2>
+      <p>Your privacy is important to us. We collect minimal data through this site, which is used solely for improving your experience. The Only Form Of Anylitics collected are via cloudflare this includes your ip adress. client information such as browser and device type and via your ip adress we store cleint geographic data. This Data is manage and kept Via CloudFlare. This Service is necesary for site security. If This Causes an Issue Please Contact me at <a href="mailto:lawri@lawridarbyshire.co.uk">mailto:lawri@lawridarbyshire.co.uk</a>.
+    <p>
+    </section>
+    <section>
+      <h2>Contact for Permissions</h2>
+      <p>If you wish to request permission to use any of the content from this website, please contact me directly at <a href="mailto:lawri@lawridarbyshire.co.uk">mailto:lawri@lawridarbyshire.co.uk</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Lawri Darbyshire. All Rights Reserved. Build Date: 20-07-24 | <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const hero = document.getElementById('hero');
+
+    // Shrink header and hero on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shrink');
+        hero.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+        hero.classList.remove('shrink');
+      }
+    });
+
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

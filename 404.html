@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header id="header">
+    <div class="logo">Lawri Darbyshire</div>
+    <div class="menu-toggle">☰</div>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="https://github.com/Darbyshire64" class="nav-link" target="_blank">GitHub</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="interests.html" class="nav-link">Interests</a>
+      <a href="certifications.html" class="nav-link">Certifications</a>
+      <a href="coppyright.html" class="nav-link">Copyright</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <section class="error-section">
+      <h1 class="error-code">404</h1>
+      <div class="error-image">
+        <img src="obi.jpg" alt="Obi-Wan Kenobi">
+        <p class="error-caption">This is not the webpage you were looking for.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2024 Lawri Darbyshire. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
