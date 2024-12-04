@@ -172,6 +172,15 @@ footer p a {
 footer p a:hover {
   text-decoration: underline;
 }
+a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 
 /* 404 Page Styles */
 .error-container {
