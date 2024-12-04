@@ -172,12 +172,12 @@ footer p a {
 footer p a:hover {
   text-decoration: underline;
 }
-a {
+p a {
   color: #ecf0f1;
   text-decoration: none;
 }
 
-a:hover {
+p a:hover {
   text-decoration: underline;
 }
 
